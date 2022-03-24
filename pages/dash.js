@@ -1,5 +1,5 @@
 import useSWR from "swr";
-
+import styles from '../styles/Dash.module.css'
 const fetcher = async() => {
     const response = await fetch('http://localhost:4000/dashboard');
     const data = await response.json();
@@ -17,7 +17,7 @@ function Dash(){
     
     return(
         <>
-            <h1>Dashboard</h1>
+            <h1 style={styles.highlight}>Dashboard</h1>
             <h2>Posts {data.posts}</h2>
             <h2>Likes {data.likes}</h2>
             <h2>Followers {data.followers}</h2>
