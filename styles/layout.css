@@ -1,0 +1,22 @@
+.layout-header{
+    background-color: blueviolet;
+    color: darkgreen;
+    padding: 23px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.layout-footer{
+    background-color: blueviolet;
+    color: darkgreen;
+    padding: 23px;
+    text-align: center;
+    font-size: 25px;
+    bottom: 0;
+}
+
+.content{
+    min-height: 77vh;
+    display: flex;
+    justify-content: center;
+}

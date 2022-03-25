@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import { useRouter } from "next/router";
-function EventLists({eventLists}){
+import  Head  from "next/head";
+function EventLists({eventLists,title, description}){
     const [events, setEvents] = useState(eventLists);
     const router = useRouter();
 
@@ -13,6 +14,10 @@ function EventLists({eventLists}){
 
     return(
         <>
+            <Head>
+                <title>{title}</title>
+                <meta name={title} content={description} />
+            </Head>
             <h2>Event Lists</h2>
             <button onClick={sportsEvents} >Click here for Only Sports Events</button>
             {
@@ -39,6 +44,8 @@ export async function getServerSideProps(context) {
     return{
         props:{
             eventLists: data,
+            title:'Events',
+            description: 'All the events with category Sports'
         }
     }
 }
