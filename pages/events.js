@@ -18,7 +18,7 @@ function EventLists({eventLists,title, description}){
                 <title>{title}</title>
                 <meta name={title} content={description} />
             </Head>
-            <h2>Event Lists</h2>
+            <h2>Event Lists with Id {process.env.NEXT_PUBLIC_DATA_ID}</h2>
             <button onClick={sportsEvents} >Click here for Only Sports Events</button>
             {
                 events.map(event=>
@@ -35,6 +35,7 @@ function EventLists({eventLists,title, description}){
 export default EventLists;
 
 export async function getServerSideProps(context) {
+    console.log(process.env.DB_USER, process.env.DB_PASS);
     const {query} = context;
     const {category} = query;
     const queryString = category ? `category=${category}` : '';

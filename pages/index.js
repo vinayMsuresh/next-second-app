@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Dash.module.scss'
+import styles from 'styles/Dash.module.scss'
 export default function Home() {
   return (
     <div >
