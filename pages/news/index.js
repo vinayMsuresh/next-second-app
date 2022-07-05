@@ -19,6 +19,7 @@ export default NewsArticles;
 
 export async function getServerSideProps(){
     const response = await fetch('http://localhost:4000/news');
+    console.log('hjkamsdl');
     const data = await response.json();
     console.log(data);
     return{
